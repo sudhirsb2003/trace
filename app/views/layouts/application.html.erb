@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>trace my ride</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<style>
+ header{ height:60px;
+         width: auto;
+         border-bottom:2px solid black;}
+</style>
+<header>
+<b style ="font-family:ubuntu;color:orange;font-size:40px;">Trace My Ride</b>
+<div id ="authetication" style ="float:right">
+<% if signed_in? %>
+ <%= current_user.email %> |
+ <b><%= link_to 'LOGOUT', destroy_user_session_path, :method => :delete %></b>
+<% else %>
+ <b><%= link_to 'LOGIN', new_user_session_path %> |
+ <%= link_to 'REGISTER', new_user_registration_path %></b>
+<% end %>
+</div>
+</header>
+<body style ="padding:20px;margin-top:10px;">
+<%= yield %>
+<%= yield :scripts %>
+</body>
+</html>

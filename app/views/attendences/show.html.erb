@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @attendence.user_id %>
+</p>
+
+<p>
+  <b>User type:</b>
+  <%= @attendence.user_type %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @attendence.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @attendence.longitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @attendence.gmaps %>
+</p>
+
+<p>
+  <b>Journy date:</b>
+  <%= @attendence.journy_date %>
+</p>
+
+<p>
+  <b>Employee boarded:</b>
+  <%= @attendence.employee_boarded %>
+</p>
+
+
+<%= link_to 'Edit', edit_attendence_path(@attendence) %> |
+<%= link_to 'Back', attendences_path %>

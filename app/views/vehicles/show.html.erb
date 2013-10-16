@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vehicle name:</b>
+  <%= @vehicle.vehicle_name %>
+</p>
+
+<p>
+  <b>Driver name:</b>
+  <%= @vehicle.driver_name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @vehicle.user_id %>
+</p>
+
+<p>
+  <b>Vehicle make:</b>
+  <%= @vehicle.vehicle_make %>
+</p>
+
+<p>
+  <b>Vehicle number:</b>
+  <%= @vehicle.vehicle_number %>
+</p>
+
+<p>
+  <b>Not in use:</b>
+  <%= @vehicle.not_in_use %>
+</p>
+
+<!--<p>
+  Latitude_1:<%= @vehicle.start_point.latitude %><br>
+  Longitude_1:<%= @vehicle.end_point.latitude %>
+</p>
+
+<p>
+  latitude_2:  <%= @vehicle.start_point.longitude %><br>
+  longitude_2: <%= @vehicle.end_point.longitude %>
+</p>-->
+
+Distance :<%= Haversine.distance(@vehicle.start_point.latitude,  @vehicle.end_point.latitude, @vehicle.start_point.longitude, @vehicle.end_point.longitude).to_miles %> Miles.<br><br>
+
+
+<%= gmaps({"direction" => { "data" => { "from" => "#{@vehicle.start_point.address}", "to" => "#{@vehicle.end_point.address}" } } }) %>
+
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

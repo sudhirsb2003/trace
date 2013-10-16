@@ -1,0 +1,35 @@
+<h1>Listing attendences</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>User type</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Gmaps</th>
+    <th>Journy date</th>
+    <th>Employee boarded</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attendences.each do |attendence| %>
+  <tr>
+    <td><%= attendence.user_id %></td>
+    <td><%= attendence.user_type %></td>
+    <td><%= attendence.latitude %></td>
+    <td><%= attendence.longitude %></td>
+    <td><%= attendence.gmaps %></td>
+    <td><%= attendence.journy_date %></td>
+    <td><%= attendence.employee_boarded %></td>
+    <td><%= link_to 'Show', attendence %></td>
+    <td><%= link_to 'Edit', edit_attendence_path(attendence) %></td>
+    <td><%= link_to 'Destroy', attendence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attendence', new_attendence_path %>

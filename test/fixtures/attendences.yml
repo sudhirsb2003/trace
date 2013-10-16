@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  user_type: MyString
+  latitude: 1.5
+  longitude: 1.5
+  gmaps: false
+  journy_date: 2013-10-16
+  employee_boarded: false
+
+two:
+  user_id: 1
+  user_type: MyString
+  latitude: 1.5
+  longitude: 1.5
+  gmaps: false
+  journy_date: 2013-10-16
+  employee_boarded: false

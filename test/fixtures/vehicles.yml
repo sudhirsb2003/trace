@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  vehicle_name: MyString
+  driver_name: MyString
+  user_id: 1
+  vehicle_make: MyString
+  vehicle_number: MyString
+  start_point: MyText
+  end_point: MyText
+  not_in_use: false
+
+two:
+  vehicle_name: MyString
+  driver_name: MyString
+  user_id: 1
+  vehicle_make: MyString
+  vehicle_number: MyString
+  start_point: MyText
+  end_point: MyText
+  not_in_use: false
